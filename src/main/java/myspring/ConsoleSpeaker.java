@@ -5,6 +5,7 @@ package myspring;
  */
 public class ConsoleSpeaker implements Speaker {
     @Override
+    @Benchmark
     public void sayMessage(String message) {
         System.out.println(message);
     }
