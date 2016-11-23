@@ -6,9 +6,11 @@
 
     <context:component-scan base-package="quoters"/>
     <context:property-placeholder location="classpath:quotes.properties"/>
-
-
-
+    <bean id="color" class="java.awt.Color">
+        <constructor-arg value="199"/>
+        <constructor-arg value="199"/>
+        <constructor-arg value="199"/>
+    </bean>
 
 
 </beans>
