@@ -2,12 +2,16 @@ package quoters;
 
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Evegeny on 23/11/2016.
  */
 
 @Setter
+@Component
+@Order(2)
 public class ShakespearQuoter implements Quoter {
     @Value("${shake}")
     private String message;

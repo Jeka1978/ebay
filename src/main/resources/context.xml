@@ -7,21 +7,8 @@
     <context:component-scan base-package="quoters"/>
     <context:property-placeholder location="classpath:quotes.properties"/>
 
-    <bean id="shakespearQuoter" class="quoters.ShakespearQuoter" >
-
-    </bean>
 
 
-    <bean class="quoters.TalkingRobotImpl">
-        <property name="quoters">
-            <list>
-                <ref bean="shakespearQuoter"/>
-                <ref bean="terminatorQuoter"/>
-            </list>
-        </property>
-    </bean>
 
-    <bean id="terminatorQuoter" class="quoters.TerminatorQuoter" scope="prototype">
 
-    </bean>
 </beans>

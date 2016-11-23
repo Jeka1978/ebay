@@ -2,7 +2,9 @@ package quoters;
 
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
 import java.lang.reflect.Array;
@@ -12,6 +14,8 @@ import java.util.List;
 /**
  * Created by Evegeny on 23/11/2016.
  */
+@Component
+@Order(1)
 public class TerminatorQuoter implements Quoter {
 
     @Setter
