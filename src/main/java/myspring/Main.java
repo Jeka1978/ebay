@@ -7,8 +7,9 @@ import heroes.Elf;
  */
 public class Main {
     public static void main(String[] args) {
-        IRobot iRobot = ObjectFactory.getInstance().createObject(IRobot.class);
-        iRobot.cleanRoom();
+        CleanerImpl cleaner = ObjectFactory.getInstance().createObject(CleanerImpl.class);
+        cleaner.clean();
+
 
     }
 }

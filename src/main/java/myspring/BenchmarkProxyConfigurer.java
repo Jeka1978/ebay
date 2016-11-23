@@ -1,5 +1,7 @@
 package myspring;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
