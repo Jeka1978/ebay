@@ -12,15 +12,15 @@ import java.util.Random;
 /**
  * Created by Evegeny on 23/11/2016.
  */
-@Component
-public class ColorFrame extends JFrame {
+public abstract class ColorFrame extends JFrame {
 
-    @Autowired
     private Color color;
+
     private Random random= new Random();
 
     @PostConstruct
     private void init(){
+        color = getColorBean();
         setSize(200,200);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
@@ -35,9 +35,12 @@ public class ColorFrame extends JFrame {
     }
 
     public void fly() {
+        color = getColorBean();
         setLocation(random.nextInt(1200),random.nextInt(900));
         getContentPane().setBackground(color);
         repaint();
     }
+
+    protected abstract Color getColorBean();
 
 }
